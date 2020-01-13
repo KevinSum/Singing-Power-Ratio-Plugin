@@ -50,12 +50,13 @@ public:
 	// Constants for FFT Stuff
 	enum
 	{
-		fftOrder = 12,           // [1] size of the FFT window - 2 ^ fftOrder
+		fftOrder = 10,           // [1] size of the FFT window - 2 ^ fftOrder
 		fftSize = 1 << fftOrder // [2] Left bit shift operator to produce 2*fftOrder as a binary number
 	};
 
 	bool nextFFTBlockReady = false; // [7] This temporary boolean tells us whether the next FFT block is ready to be rendered.
 	float fftData[2 * fftSize];    // [5] The fftData float array of size 2048 will contain the results of our FFT calculations.
+	int numZeroCrossing; // Number of times a signal crosses zero in an fft frame
 
 private:
 	//==============================================================================
@@ -63,6 +64,7 @@ private:
 	
 	float fifo[fftSize];           // [4] The fifo float array of size 1024 will contain our incoming audio data in samples.
 	int fifoIndex = 0;              // [6] This temporary index keeps count of the amount of samples in the fifo.
+	float prevSample = 0;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MpasAudioProcessor)
 };

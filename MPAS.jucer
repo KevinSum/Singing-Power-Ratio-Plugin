@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="WRldai" name="MPAS V2" projectType="audioplug" jucerVersion="5.4.5"
-              pluginName="MPAS v2" pluginDesc="MPAS v2">
-  <MAINGROUP id="rVFEi1" name="MPAS V2">
+<JUCERPROJECT id="WRldai" name="SPR Meter" projectType="audioplug" jucerVersion="5.4.5"
+              pluginName="SPR Meter" pluginDesc="SPR Meter" companyName="MPAS">
+  <MAINGROUP id="rVFEi1" name="SPR Meter">
     <GROUP id="{2F2B2DBC-2137-646C-F113-4F7EB6134CE3}" name="Source">
       <FILE id="e0yLgi" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
@@ -14,33 +14,10 @@
     </GROUP>
   </MAINGROUP>
   <EXPORTFORMATS>
-    <VS2017 targetFolder="Builds/VisualStudio2017" vst3Folder="..\VST_SDK\VST3_SDK">
-      <CONFIGURATIONS>
-        <CONFIGURATION isDebug="1" name="Debug"/>
-        <CONFIGURATION isDebug="0" name="Release"/>
-      </CONFIGURATIONS>
-      <MODULEPATHS>
-        <MODULEPATH id="juce_audio_basics" path="../../Program Files/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_devices" path="../../Program Files/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_formats" path="../../Program Files/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_plugin_client" path="../../Program Files/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_processors" path="../../Program Files/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_utils" path="../../Program Files/JUCE/modules"/>
-        <MODULEPATH id="juce_core" path="../../Program Files/JUCE/modules"/>
-        <MODULEPATH id="juce_cryptography" path="../../Program Files/JUCE/modules"/>
-        <MODULEPATH id="juce_data_structures" path="../../Program Files/JUCE/modules"/>
-        <MODULEPATH id="juce_events" path="../../Program Files/JUCE/modules"/>
-        <MODULEPATH id="juce_graphics" path="../../Program Files/JUCE/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="../../Program Files/JUCE/modules"/>
-        <MODULEPATH id="juce_gui_extra" path="../../Program Files/JUCE/modules"/>
-        <MODULEPATH id="juce_opengl" path="../../Program Files/JUCE/modules"/>
-        <MODULEPATH id="juce_dsp" path="../../Program Files/JUCE/modules"/>
-      </MODULEPATHS>
-    </VS2017>
     <VS2019 targetFolder="Builds/VisualStudio2019" vst3Folder="..\VST_SDK\VST3_SDK">
       <CONFIGURATIONS>
-        <CONFIGURATION isDebug="1" name="Debug"/>
-        <CONFIGURATION isDebug="0" name="Release"/>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="SPR Meter"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="SPR Meter"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_opengl"/>

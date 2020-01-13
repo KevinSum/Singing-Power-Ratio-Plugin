@@ -49,8 +49,8 @@
 #if ! JUCE_DONT_DECLARE_PROJECTINFO
 namespace ProjectInfo
 {
-    const char* const  projectName    = "MPAS V2";
-    const char* const  companyName    = "";
+    const char* const  projectName    = "SPR Meter";
+    const char* const  companyName    = "MPAS";
     const char* const  versionString  = "1.0.0";
     const int          versionNumber  = 0x10000;
 }
