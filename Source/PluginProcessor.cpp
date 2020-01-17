@@ -159,12 +159,15 @@ void MpasAudioProcessor::pushNextSampleIntoFifo (float sample) noexcept
 {
 	// if the fifo contains enough data, set a flag to say
 	// that the next FFT block should be processed
-    if (fifoIndex == fftSize)   // [9] Every time this function gets called, a sample is stored in the fifo and the index is incremented.
+    if (fifoIndex == fftSize) // Every time this function gets called, a sample is stored in the fifo and the index is incremented.
     {
         if (!nextFFTBlockReady) 
         {
+			// Copy FIFO into our arrays
             zeromem (fftData, sizeof (fftData));
             memcpy (fftData, fifo, sizeof (fifo));
+			zeromem(bufferData, sizeof(bufferData));
+			memcpy(bufferData, fifo, sizeof(fifo));
             nextFFTBlockReady = true;
         }
         fifoIndex = 0;
@@ -176,7 +179,7 @@ void MpasAudioProcessor::pushNextSampleIntoFifo (float sample) noexcept
 		numZeroCrossing++;
 
 	prevSample = sample; // Update previous sample
-    fifo[fifoIndex++] = sample;  // [9] Every time this function gets called, a sample is stored in the fifo and the index is incremented.
+    fifo[fifoIndex++] = sample;  // Every time this function gets called, a sample is stored in the fifo and the index is incremented.
 }
 
 //==============================================================================

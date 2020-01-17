@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="WRldai" name="SPR Meter" projectType="audioplug" jucerVersion="5.4.5"
-              pluginName="SPR Meter" pluginDesc="SPR Meter" companyName="MPAS">
+              pluginName="SPR Meter" pluginDesc="SPR Meter" companyName="MPAS"
+              displaySplashScreen="1" reportAppUsage="1" splashScreenColour="Dark"
+              version="1.0.0" buildVST="1" buildVST3="1" buildAU="0" buildAUv3="0"
+              buildRTAS="0" buildAAX="0" buildStandalone="0" enableIAA="0"
+              pluginManufacturer="KevinSum" pluginManufacturerCode="Manu" pluginCode="Wrld"
+              pluginChannelConfigs="" pluginIsSynth="0" pluginWantsMidiIn="0"
+              pluginProducesMidiOut="0" pluginIsMidiEffectPlugin="0" pluginEditorRequiresKeys="0"
+              pluginAUExportPrefix="SPRMeterAU" pluginRTASCategory="" bundleIdentifier="com.KevinSum.SPRMeter"
+              aaxIdentifier="com.yourcompany.SPRMeter" pluginAAXCategory="2"
+              includeBinaryInAppConfig="1" pluginFormats="buildVST,buildVST3">
   <MAINGROUP id="rVFEi1" name="SPR Meter">
     <GROUP id="{2F2B2DBC-2137-646C-F113-4F7EB6134CE3}" name="Source">
       <FILE id="e0yLgi" name="PluginProcessor.cpp" compile="1" resource="0"
@@ -14,29 +23,31 @@
     </GROUP>
   </MAINGROUP>
   <EXPORTFORMATS>
-    <VS2019 targetFolder="Builds/VisualStudio2019" vst3Folder="..\VST_SDK\VST3_SDK">
+    <VS2017 targetFolder="Builds/VisualStudio2017">
       <CONFIGURATIONS>
-        <CONFIGURATION isDebug="1" name="Debug" targetName="SPR Meter"/>
-        <CONFIGURATION isDebug="0" name="Release" targetName="SPR Meter"/>
+        <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
+                       isDebug="1" optimisation="1" targetName="SPR Meter"/>
+        <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
+                       isDebug="0" optimisation="3" targetName="SPR Meter"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
-        <MODULEPATH id="juce_opengl"/>
-        <MODULEPATH id="juce_gui_extra"/>
-        <MODULEPATH id="juce_gui_basics"/>
-        <MODULEPATH id="juce_graphics"/>
-        <MODULEPATH id="juce_events"/>
-        <MODULEPATH id="juce_dsp"/>
-        <MODULEPATH id="juce_data_structures"/>
-        <MODULEPATH id="juce_cryptography"/>
-        <MODULEPATH id="juce_core"/>
-        <MODULEPATH id="juce_audio_utils"/>
-        <MODULEPATH id="juce_audio_processors"/>
-        <MODULEPATH id="juce_audio_plugin_client"/>
-        <MODULEPATH id="juce_audio_formats"/>
-        <MODULEPATH id="juce_audio_devices"/>
-        <MODULEPATH id="juce_audio_basics"/>
+        <MODULEPATH id="juce_opengl" path="../../juce"/>
+        <MODULEPATH id="juce_gui_extra" path="../../juce"/>
+        <MODULEPATH id="juce_gui_basics" path="../../juce"/>
+        <MODULEPATH id="juce_graphics" path="../../juce"/>
+        <MODULEPATH id="juce_events" path="../../juce"/>
+        <MODULEPATH id="juce_dsp" path="../../juce"/>
+        <MODULEPATH id="juce_data_structures" path="../../juce"/>
+        <MODULEPATH id="juce_cryptography" path="../../juce"/>
+        <MODULEPATH id="juce_core" path="../../juce"/>
+        <MODULEPATH id="juce_audio_utils" path="../../juce"/>
+        <MODULEPATH id="juce_audio_processors" path="../../juce"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../juce"/>
+        <MODULEPATH id="juce_audio_formats" path="../../juce"/>
+        <MODULEPATH id="juce_audio_devices" path="../../juce"/>
+        <MODULEPATH id="juce_audio_basics" path="../../juce"/>
       </MODULEPATHS>
-    </VS2019>
+    </VS2017>
   </EXPORTFORMATS>
   <MODULES>
     <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
@@ -59,5 +70,5 @@
   <LIVE_SETTINGS>
     <WINDOWS/>
   </LIVE_SETTINGS>
-  <JUCEOPTIONS JUCE_VST3_CAN_REPLACE_VST2="0" JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
+  <JUCEOPTIONS/>
 </JUCERPROJECT>
